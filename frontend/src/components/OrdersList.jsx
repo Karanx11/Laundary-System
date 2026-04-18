@@ -61,7 +61,7 @@ function OrdersList({ refresh }) {
       if (!confirmDelete) return;
 
       await axios.delete(
-        `http://localhost:5000/api/orders/delete/${orderId}`
+        `https://laundary-backend-jqf5.onrender.com/api/orders/delete/${orderId}`
       );
 
       fetchOrders(); // refresh after delete

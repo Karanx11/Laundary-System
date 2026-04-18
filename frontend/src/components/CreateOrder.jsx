@@ -12,7 +12,7 @@ function CreateOrder({ onCreated }) {
 
  const handleSubmit = async () => {
   try {
-    await axios.post("http://localhost:5000/api/orders/create", {
+    await axios.post("https://laundary-backend-jqf5.onrender.com/api/orders/create", {
       ...form,
       garments: form.garments.split(","),
       quantities: form.quantities.split(",").map(Number)

@@ -5,7 +5,7 @@ function Dashboard({ refresh }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/orders/dashboard")
+    axios.get("https://laundary-backend-jqf5.onrender.com/api/orders/dashboard")
       .then(res => setData(res.data));
   }, [refresh]);
 
