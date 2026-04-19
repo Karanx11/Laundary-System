@@ -98,3 +98,9 @@ exports.deleteOrder = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// Clearr Orders
+exports.clearOrders = async (req, res) => {
+  await Order.deleteMany({});
+  res.json({ message: "All orders cleared" });
+};

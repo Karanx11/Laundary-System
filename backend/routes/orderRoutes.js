@@ -9,5 +9,6 @@ router.put("/update/:orderId", orderController.updateStatus);
 router.get("/", orderController.getOrders);
 router.get("/dashboard", orderController.getDashboard);
 router.delete("/delete/:orderId", orderController.deleteOrder);
+router.delete("/clear", orderController.clearOrders);
 
 module.exports = router;
